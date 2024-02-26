@@ -11,10 +11,11 @@ int main() {
 	// lists operators for user
 	cout << "Operators:" << endl;
 	cout << "Addition: +, ";
-	cout << "Subtraction -, ";
+	cout << "Subtraction: -, ";
 	cout << "Multiplication: *, ";
 	cout << "Division: /, ";
-	cout << "Exponentiation: ^" << endl;
+	cout << "Exponentiation: ^, ";
+	cout << "Modulo: %, " << endl;
 	
 	// asks for operator from user
 	cout << "Enter Operator: ";
@@ -74,6 +75,17 @@ int main() {
 		cin >> val2;
 		
 		result = pow(val1, val2);
+		cout << "Result: " << result << endl;
+	}
+	// checks if chosen operation is modulus
+	else if (oper == '%') {
+		cout << "Please note that both numbers must be whole numbers" << endl;
+		cout << "Enter the dividend: ";
+		cin >> val1;
+		cout << "Enter the divisor: ";
+		cin >> val2;
+		
+		result = int(val1) % int(val2);
 		cout << "Result: " << result << endl;
 	}
 	else {
